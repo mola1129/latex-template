@@ -1,7 +1,6 @@
 {
   "latex-workshop.latex.tools": [
     {
-      // 日本語用 latex
       "name": "platex",
       "command": "ptex2pdf",
       "args": [
@@ -13,7 +12,6 @@
       ],
     },
     {
-      // 日本語用 latex
       "name": "uplatex",
       "command": "ptex2pdf",
       "args": [
@@ -26,7 +24,6 @@
       ]
     },
     {
-      // 英語用 latex
       "name": "pdflatex",
       "command": "pdflatex",
       "args": [
@@ -38,7 +35,6 @@
       ]
     },
     {
-      // 日本語用 bibtex
       "name": "pbibtex",
       "command": "pbibtex",
       "args": [
@@ -47,7 +43,6 @@
       ],
     },
     {
-      // 英語用 bibtex
       "name": "bibtex",
       "command": "bibtex",
       "args": [
@@ -56,7 +51,6 @@
     },
   ],
   "latex-workshop.latex.recipes": [
-    // platex, uplatex, pdflatex の各コンパイル手順
     {
       "name": "platex",
       "tools": [
@@ -85,8 +79,8 @@
       ]
     }
   ],
-  "latex-workshop.latex.recipe.default": "pdflatex", // 保存時は pdflatex でコンパイル
-  "latex-workshop.latex.outDir": "./build", // コンパイル結果を build/ に出力
+  "latex-workshop.latex.recipe.default": "pdflatex",
+  "latex-workshop.latex.outDir": "./build",
   "latex-workshop.view.pdf.viewer": "tab",
   "latex-workshop.view.pdf.zoom": "page-actual",
   "latex-workshop.latex.autoBuild.run": "onSave",
