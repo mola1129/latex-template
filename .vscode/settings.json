@@ -1,0 +1,95 @@
+{
+  "latex-workshop.latex.tools": [
+    {
+      // 日本語用 latex
+      "name": "platex",
+      "command": "ptex2pdf",
+      "args": [
+        "-l",
+        "-ot",
+        "-kanji=utf8 -synctex=1",
+        "-output-directory=build",
+        "%DOC%"
+      ],
+    },
+    {
+      // 日本語用 latex
+      "name": "uplatex",
+      "command": "ptex2pdf",
+      "args": [
+        "-l",
+        "-u",
+        "-ot",
+        "-kanji=utf8 -synctex=1",
+        "-output-directory=build",
+        "%DOC%"
+      ]
+    },
+    {
+      // 英語用 latex
+      "name": "pdflatex",
+      "command": "pdflatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-output-directory=build",
+        "%DOC%"
+      ]
+    },
+    {
+      // 日本語用 bibtex
+      "name": "pbibtex",
+      "command": "pbibtex",
+      "args": [
+        "-kanji=utf8",
+        "build/%DOCFILE%"
+      ],
+    },
+    {
+      // 英語用 bibtex
+      "name": "bibtex",
+      "command": "bibtex",
+      "args": [
+        "build/%DOCFILE%"
+      ]
+    },
+  ],
+  "latex-workshop.latex.recipes": [
+    // platex, uplatex, pdflatex の各コンパイル手順
+    {
+      "name": "platex",
+      "tools": [
+        "platex",
+        "pbibtex",
+        "platex",
+        "platex"
+      ]
+    },
+    {
+      "name": "uplatex",
+      "tools": [
+        "uplatex",
+        "pbibtex",
+        "uplatex",
+        "uplatex"
+      ]
+    },
+    {
+      "name": "pdflatex",
+      "tools": [
+        "pdflatex",
+        "bibtex",
+        "pdflatex",
+        "pdflatex"
+      ]
+    }
+  ],
+  "latex-workshop.latex.recipe.default": "pdflatex", // 保存時は pdflatex でコンパイル
+  "latex-workshop.latex.outDir": "./build", // コンパイル結果を build/ に出力
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.view.pdf.zoom": "page-actual",
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.latex.autoClean.run": "onBuilt",
+  "latex-workshop.synctex.afterBuild.enabled": true,
+}
