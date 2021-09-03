@@ -8,7 +8,7 @@
 | `bib/`  | `bibtex` の参考文献, スタイルの設定 |
 | `build/` | `latex` コンパイル時の出力先 |
 | `class/` | `class` ファイル |
-| `referemce/` | 参考文献の `pdf` ファイル |
+| `reference/` | 参考文献の `pdf` ファイル |
 
 ## 動作確認環境
 - `Windows 7` + `Windows Subsystem for Linux 2 (Ubuntu 18.04)` + `TexLive 2019`
